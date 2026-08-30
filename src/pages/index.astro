@@ -8,43 +8,173 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`${SITE_TITLE} — Digital Engineering & Web Architecture`} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Yassine???</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<span class="badge">Available for New Projects</span>
+				<h1>High-Performance Web Solutions for Ambitious Brands</h1>
+				<p class="lead">
+					We build lightning-fast, accessible, and scalable web applications engineered to convert visitors into loyal customers.
+				</p>
+				<div class="cta-group">
+					<a href="/contact" class="btn btn-primary">Start a Project</a>
+					<a href="/portfolio" class="btn btn-secondary">View Our Work</a>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2>Core Capabilities</h2>
+				<div class="grid">
+					<div class="card">
+						<h3>Web Engineering</h3>
+						<p>Custom SSR and static site builds using Astro, React, and modern TypeScript architectures for maximum speed and SEO dominance.</p>
+					</div>
+					<div class="card">
+						<h3>UI/UX Systems</h3>
+						<p>Design systems and responsive interfaces built with precision, prioritizing accessibility, performant animations, and user conversion.</p>
+					</div>
+					<div class="card">
+						<h3>Performance & Optimization</h3>
+						<p>Audit and revamp existing platforms to achieve near-perfect Core Web Vitals, sub-second load times, and flawless accessibility scores.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="metrics">
+				<div class="metric">
+					<span class="number">99+</span>
+					<span class="label">Lighthouse Scores</span>
+				</div>
+				<div class="metric">
+					<span class="number">&lt;100ms</span>
+					<span class="label">Average TTFB</span>
+				</div>
+				<div class="metric">
+					<span class="number">100%</span>
+					<span class="label">Type-Safe Deliverables</span>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 3em 1em;
+	}
+	.badge {
+		display: inline-block;
+		padding: 0.25em 0.75em;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #0284c7;
+		background: #e0f2fe;
+		border-radius: 9999px;
+		margin-bottom: 1em;
+	}
+	.hero h1 {
+		font-size: 2.75rem;
+		line-height: 1.15;
+		margin-bottom: 0.5em;
+	}
+	.lead {
+		font-size: 1.25rem;
+		color: #4b5563;
+		line-height: 1.6;
+		max-width: 65ch;
+	}
+	.cta-group {
+		display: flex;
+		gap: 1em;
+		margin-top: 2em;
+	}
+	.btn {
+		display: inline-block;
+		padding: 0.75em 1.5em;
+		border-radius: 6px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+	.btn-primary {
+		background: #0f172a;
+		color: #ffffff;
+	}
+	.btn-primary:hover {
+		background: #1e293b;
+	}
+	.btn-secondary {
+		border: 1px solid #cbd5e1;
+		color: #0f172a;
+	}
+	.btn-secondary:hover {
+		background: #f8fafc;
+	}
+	.services {
+		margin-top: 5em;
+	}
+	.services h2 {
+		font-size: 1.75rem;
+		margin-bottom: 1.5em;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 1.5em;
+	}
+	.card {
+		padding: 1.5em;
+		border: 1px solid #e2e8f0;
+		border-radius: 8px;
+		background: #fafafa;
+	}
+	.card h3 {
+		margin-top: 0;
+		font-size: 1.2rem;
+	}
+	.card p {
+		margin-bottom: 0;
+		color: #64748b;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+	.metrics {
+		display: flex;
+		justify-content: space-between;
+		gap: 2em;
+		margin-top: 5em;
+		padding: 2em;
+		background: #0f172a;
+		color: #ffffff;
+		border-radius: 8px;
+	}
+	.metric {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex: 1;
+	}
+	.number {
+		font-size: 2rem;
+		font-weight: 700;
+		color: #38bdf8;
+	}
+	.label {
+		font-size: 0.85rem;
+		color: #94a3b8;
+		margin-top: 0.25em;
+	}
+	@media (max-width: 640px) {
+		.metrics {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+</style>
